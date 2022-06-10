@@ -1,3 +1,4 @@
+@import './global.scss';
 #root {
   background: #ebeeef;
   height: 100vh;
@@ -5,5 +6,6 @@
   padding: 15px;
 }
 body {
+  font-family: Poppins-Regular, sans-serif;
   margin: 0;
 }
