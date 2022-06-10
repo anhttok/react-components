@@ -43,13 +43,13 @@ const LoginForm = (props: Props) => {
             <div>
               <input
                 className="login-form__container--field-checkbox"
-                id="ckb1"
+                id="checkbox"
                 type="checkbox"
                 name="remember-me"
               />
               <label
                 className="login-form__container--field-checkbox-label"
-                htmlFor="ckb1"
+                htmlFor="checkbox"
               >
                 Remember me
               </label>

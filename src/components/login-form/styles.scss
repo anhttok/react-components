@@ -104,24 +104,45 @@
         }
       }
       &-checkbox {
-        width: 18px;
-        height: 18px;
-        border-radius: 2px;
-        background: #fff;
-        border: 1px solid #e6e6e6;
-        cursor: pointer;
-        box-sizing: border-box;
-        padding: 0;
-        outline: none;
-        margin-right: 6px;
+        display: none;
+        &:checked + label::before {
+          color: #57b846 !important;
+        }
       }
       &-checkbox-label {
+        margin-left: 30px;
         font-size: 13px;
         color: #999999;
         line-height: 1.4;
         display: block;
         position: relative;
         cursor: pointer;
+        &::before {
+          left: -25px;
+          content: '✔';
+          font-family: FontAwesome;
+          font-size: 13px;
+          color: transparent;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          border-radius: 2px;
+          background: #fff;
+          border: 1px solid #e6e6e6;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
       }
       &-forgot-pass {
         text-decoration: none;
@@ -159,8 +180,5 @@
     &:hover {
       background-color: #333333 !important;
     }
-  }
-  input:focus::-webkit-input-placeholder {
-    color: transparent !important;
   }
 }

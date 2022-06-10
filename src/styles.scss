@@ -1,8 +1,12 @@
 @import './global.scss';
-#root {
+.app {
   background: #ebeeef;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
 }
 body {
