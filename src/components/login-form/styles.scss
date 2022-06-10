@@ -92,6 +92,10 @@
         outline: none;
         border: none;
         border-bottom: 1px solid #b2b2b2;
+        transition: border-bottom 0.3s linear;
+        &:focus {
+          border-bottom: 1px solid #57b846 !important;
+        }
       }
       &-container.remember-me {
         margin-left: auto;
