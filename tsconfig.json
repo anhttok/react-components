@@ -20,6 +20,10 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "rules": {
+  "jsx-a11y/anchor-is-valid": [
+  "off"
+  ]},
   "include": [
     "src"
   ]
