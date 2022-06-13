@@ -1,12 +1,15 @@
 .footer {
-  width: 100%;
-  max-width: 1120px;
+  width: 1120px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #ccc;
-
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   &-links {
     list-style: none;
     display: flex;
@@ -30,5 +33,21 @@
     font-weight: 300;
     word-spacing: 1px;
     text-transform: capitalize;
+  }
+  @media screen and(max-width:786px) {
+    flex-direction: column;
+    white-space: nowrap;
+    margin-top: 32px;
+
+    &-links {
+      font-size: 15px !important;
+      margin: 0;
+      padding: 0;
+    }
+    &-copyright {
+      margin-top: 18px;
+      color: white;
+      font-size: 14px !important;
+    }
   }
 }

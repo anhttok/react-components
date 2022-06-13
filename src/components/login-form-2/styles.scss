@@ -1,6 +1,7 @@
 @import './fonts/fonts.scss';
 @import './font-awesome.min.css';
 .login-form-2 {
+  min-height: 100vh;
   width: 100%;
   height: fit-content;
   position: relative;
@@ -19,5 +20,8 @@
     background-position: center;
     position: absolute;
     z-index: -1;
+  }
+  @media screen and(max-width:786px) {
+    padding: 16px 0;
   }
 }
