@@ -1,5 +1,67 @@
 .app {
   padding: 0;
+  margin: 0 auto;
+  width: fit-content;
+  ol.prefixed {
+    counter-reset: item;
+    list-style-type: none;
+    *list-style-type: decimal; /*Conditional hack for ie7*/
+  }
+
+  ol.prefixed li:before {
+    content: 'Q' counter(item, decimal) '. ';
+    counter-increment: item;
+  }
+
+  /* The <ol> needs to have its counter-reset redefined for each version you want to create. */
+  ol.steps {
+    counter-reset: item;
+  }
+  ol.steps li:before {
+    content: 'Step ' counter(item, decimal) '. ';
+  }
+
+  ol.nodot {
+    counter-reset: item;
+  }
+  ol.nodot li:before {
+    content: 'Step ' counter(item, decimal) ' ';
+  }
+
+  ol.styled {
+    counter-reset: item;
+  }
+  ol.styled li {
+    background: rgba(78, 68, 50, 0.1);
+    border-radius: 4px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  ol.styled li:before {
+    content: '' counter(item, decimal) '';
+    background: #4e443c;
+    border-radius: 4px;
+    color: #f7f7ef;
+    font-size: 15px;
+    margin: 0 5px 0 8px;
+    padding: 4px 7px;
+  }
+
+  ol {
+    float: left;
+    list-style-type: decimal;
+    margin: 1em;
+    margin-left: 0;
+    padding: 1em;
+    padding-right: 2em;
+  }
+  a {
+    color: #4e443c;
+    text-decoration: none;
+  }
 }
 body {
   margin: 0;
