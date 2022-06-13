@@ -1,6 +1,6 @@
 .header {
-  max-width: 1120px;
-  width: 100%;
+  max-width: 100%;
+  width: 1120px;
   margin: 0 auto;
   color: white;
   display: flex;
@@ -35,6 +35,31 @@
       a.active {
         background: rgba(255, 255, 255, 0.05);
       }
+    }
+  }
+  @media screen and (max-width: 786px) {
+    flex-direction: column;
+    &-logo {
+      h1 {
+        margin: 0;
+      }
+      span {
+        margin-bottom: 15px;
+        font-size: 20px !important;
+      }
+      &__text {
+        font-size: 20px !important;
+      }
+    }
+  }
+  &-navigation {
+    margin: 0;
+    padding: 0;
+    a {
+      padding: 5px 15px;
+      margin-right: 0;
+      font-size: 15px;
+      white-space: nowrap;
     }
   }
 }

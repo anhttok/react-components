@@ -193,4 +193,18 @@
       color: #fff !important;
     }
   }
+  @media screen and (max-width: 786px) {
+    form {
+      margin: 15px 32px;
+    }
+    &-logo {
+      .fa-html5 {
+        font-size: 40px;
+      }
+      margin-top: 48px;
+    }
+  }
+  .field-group {
+    padding: 0px 10px 0px 0;
+  }
 }
