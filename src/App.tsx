@@ -1,13 +1,17 @@
 import React from 'react';
-import LoginForm from './components/login-form/login-form-1';
-import './fonts/Poppins-Bold.ttf';
-import './fonts/Poppins-Regular.ttf';
+import { Link } from 'react-router-dom';
 import './styles.scss';
-
 function App() {
   return (
     <div className="app">
-      <LoginForm />
+      <ol className="prefixed styled">
+        <li>
+          ​<Link to="login-form-1">Login Form 1</Link>
+        </li>
+        <li>
+          <Link to="login-form-2">Login Form 2</Link>
+        </li>
+      </ol>
     </div>
   );
 }
