@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import Footer from './footer';
 import Form from './form';
 import Header from './header';
-import SideBar from './sidebar';
 import './styles.scss';
 
 type Props = {};
@@ -111,7 +109,6 @@ const LoginForm2 = (props: Props) => {
         />
         <Header />
         <Form />
-        <SideBar />
         <Footer />
         <div id="particles-js"></div>
 
