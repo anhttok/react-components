@@ -1,85 +1,76 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import './styles.scss';
 
 type Props = {};
 const backgroundUrl = 'https://colorlib.com/etc/lf/Login_v15/images/bg-01.jpg';
 const LoginForm = (props: Props) => {
   return (
-    <>
-      <Link to="/">Back</Link>
-      <div className="login-form">
-        <div className="login-form__wrapper">
-          <div className="login-form__title">
-            <div className="login-form__title--text">SIGN IN</div>
-            <div
-              className="login-form__background"
-              style={{ backgroundImage: `url(${backgroundUrl})` }}
+    <div className="login-form">
+      <div className="login-form__wrapper">
+        <div className="login-form__title">
+          <div className="login-form__title--text">SIGN IN</div>
+          <div
+            className="login-form__background"
+            style={{ backgroundImage: `url(${backgroundUrl})` }}
+          />
+        </div>
+        <form action="" className="login-form__container">
+          <div
+            className="login-form__container--field-container"
+            data-validate="Username is required"
+          >
+            <span className="login-form__container--field-label">Username</span>
+            <input
+              className="login-form__container--field-input"
+              type="text"
+              name="username"
+              placeholder="Enter username"
             />
           </div>
-          <form action="" className="login-form__container">
-            <div
-              className="login-form__container--field-container"
-              data-validate="Username is required"
-            >
-              <span className="login-form__container--field-label">
-                Username
-              </span>
-              <input
-                className="login-form__container--field-input"
-                type="text"
-                name="username"
-                placeholder="Enter username"
-              />
-            </div>
-            <div
-              className="login-form__container--field-container"
-              data-validate="Password is required"
-            >
-              <span className="login-form__container--field-label">
-                Password
-              </span>
-              <input
-                className="login-form__container--field-input"
-                type="text"
-                name="password"
-                placeholder="Enter password"
-              />
-            </div>
-            <div>
-              <div className="login-form__container--field-container remember-me">
-                <div>
-                  <input
-                    className="login-form__container--field-checkbox"
-                    id="checkbox"
-                    type="checkbox"
-                    name="remember-me"
-                  />
-                  <label
-                    className="login-form__container--field-checkbox-label"
-                    htmlFor="checkbox"
-                  >
-                    Remember me
-                  </label>
-                </div>
-                <a
-                  href="#"
-                  target="_blank"
-                  className="login-form__container--field-forgot-pass"
+          <div
+            className="login-form__container--field-container"
+            data-validate="Password is required"
+          >
+            <span className="login-form__container--field-label">Password</span>
+            <input
+              className="login-form__container--field-input"
+              type="text"
+              name="password"
+              placeholder="Enter password"
+            />
+          </div>
+          <div>
+            <div className="login-form__container--field-container remember-me">
+              <div>
+                <input
+                  className="login-form__container--field-checkbox"
+                  id="checkbox"
+                  type="checkbox"
+                  name="remember-me"
+                />
+                <label
+                  className="login-form__container--field-checkbox-label"
+                  htmlFor="checkbox"
                 >
-                  Forgot password?
-                </a>
+                  Remember me
+                </label>
               </div>
+              <a
+                href="/"
+                target="_blank"
+                className="login-form__container--field-forgot-pass"
+              >
+                Forgot password?
+              </a>
             </div>
-            <div>
-              <button className="login-form__btn-login" type="submit">
-                Login
-              </button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div>
+            <button className="login-form__btn-login" type="submit">
+              Login
+            </button>
+          </div>
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 
