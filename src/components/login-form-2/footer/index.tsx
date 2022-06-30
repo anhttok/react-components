@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
           </li>
         ))}
       </ul>
-      <div className="footer-copyright">All Rights Reserved</div>
+      <div className="footer-copyright">© All Rights Reserved</div>
     </div>
   );
 };
