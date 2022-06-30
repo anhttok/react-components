@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles.scss';
 type Props = {};
 
@@ -17,9 +16,7 @@ const Footer = (props: Props) => {
           </li>
         ))}
       </ul>
-      <div className="footer-copyright">
-        © 2019 Key. All Rights Reserved | Design By
-      </div>
+      <div className="footer-copyright">All Rights Reserved</div>
     </div>
   );
 };
