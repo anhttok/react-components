@@ -1,5 +1,5 @@
 import { MouseEvent, ReactElement, TouchEvent, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import IconList from './iconList';
 import './styles.scss';
 type Props = {
@@ -7,6 +7,8 @@ type Props = {
 };
 
 const FloatingActionButton = ({ children }: Props) => {
+  const location = useLocation();
+
   const listPage: string[] = ['/', 'login-form-2'];
   const fabElement = useRef<HTMLDivElement>(null);
   const wrapperElement = useRef<HTMLDivElement>(null);
@@ -110,6 +112,22 @@ const FloatingActionButton = ({ children }: Props) => {
       fabElement.current.classList.toggle('fab-active');
     }
   };
+  const renderPageItem = (listPage: string[]) => {
+    return listPage.map((item, index) => {
+      if (location.pathname.replace('/', '') === item.replace('/', '')) {
+        return (
+          <li key={index} className="current-page">
+            <Link to={item}>{index + 1}</Link>
+          </li>
+        );
+      }
+      return (
+        <li key={index}>
+          <Link to={item}>{index + 1}</Link>
+        </li>
+      );
+    });
+  };
   return (
     <div id="main-wrapper" ref={wrapperElement}>
       <div
@@ -124,13 +142,7 @@ const FloatingActionButton = ({ children }: Props) => {
         <div className="fab-btn">
           <IconList className="fab-btn__icon" />
         </div>
-        <ul>
-          {listPage.map((item, index) => (
-            <li key={index}>
-              <Link to={item}>{index + 1}</Link>
-            </li>
-          ))}
-        </ul>
+        <ul>{renderPageItem(listPage)}</ul>
       </div>
       <div className="children">{children}</div>
     </div>

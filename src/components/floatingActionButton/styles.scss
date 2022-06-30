@@ -109,6 +109,12 @@
       }
     }
   }
+  .current-page {
+    background-color: #f4842a !important;
+    a {
+      color: white !important;
+    }
+  }
 }
 .children {
   z-index: -1;
