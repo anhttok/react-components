@@ -28,7 +28,10 @@
       box-shadow: 0px 2px 17px -1px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       &__icon {
-        width: 22px;
+        width: 60px;
+        path:first-of-type {
+          fill: transparent !important;
+        }
         path {
           fill: #555555;
         }
@@ -76,34 +79,34 @@
       &.left {
         li:nth-child(1) {
           top: 0%;
-          left: 300%;
+          left: 200%;
           transition-delay: 0s;
         }
         li:nth-child(2) {
           top: 0%;
-          left: 200%;
+          left: 101%;
           transition-delay: 0.2s;
         }
         li:nth-child(3) {
           top: 0%;
-          left: 100%;
+          left: 0%;
           transition-delay: 0.4s;
         }
       }
       &.right {
         li:nth-child(1) {
           top: 0%;
-          left: -300%;
+          left: -200%;
           transition-delay: 0s;
         }
         li:nth-child(2) {
           top: 0%;
-          left: -200%;
+          left: -101%;
           transition-delay: 0.2s;
         }
         li:nth-child(3) {
           top: 0%;
-          left: -100%;
+          left: 0%;
           transition-delay: 0.4s;
         }
       }
