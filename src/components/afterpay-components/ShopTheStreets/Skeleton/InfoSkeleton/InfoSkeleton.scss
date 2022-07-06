@@ -1,0 +1,31 @@
+@import '../skeleton';
+.info-skeleton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 26px 0;
+    .border-skeleton {
+        width: 73.6px;
+        height: 73.6px;
+        border-radius: 50%;
+        @extend .raw-skeleton;
+    }
+    .name-skeleton {
+        margin-left: 11.4px;
+        height: 16px;
+        width: 80px;
+        @extend .raw-skeleton;
+    }
+    @media screen and(max-width: 768px) {
+        justify-content: flex-start;
+        margin-left: 24px;
+        margin-bottom: 14px;
+        .border-skeleton {
+            width: 40px;
+            height: 40px;
+        }
+        .name-skeleton {
+            height: 11px;
+        }
+    }
+}

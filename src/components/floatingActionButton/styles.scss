@@ -77,37 +77,15 @@
         background-color: #f8e487;
       }
       &.left {
-        li:nth-child(1) {
+        li {
           top: 0%;
-          left: 200%;
-          transition-delay: 0s;
-        }
-        li:nth-child(2) {
-          top: 0%;
-          left: 101%;
-          transition-delay: 0.2s;
-        }
-        li:nth-child(3) {
-          top: 0%;
-          left: 0%;
-          transition-delay: 0.4s;
+          transition-delay: 0.1s;
         }
       }
       &.right {
-        li:nth-child(1) {
+        li {
           top: 0%;
-          left: -200%;
-          transition-delay: 0s;
-        }
-        li:nth-child(2) {
-          top: 0%;
-          left: -101%;
-          transition-delay: 0.2s;
-        }
-        li:nth-child(3) {
-          top: 0%;
-          left: 0%;
-          transition-delay: 0.4s;
+          transition-delay: 0.1s;
         }
       }
     }

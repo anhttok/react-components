@@ -46,7 +46,7 @@ const Form = (props: Props) => {
             </label>
           </li>
           <li>
-            <a href="#" className="text-right">
+            <a href="/" className="text-right">
               Forgot password?
             </a>
           </li>
@@ -54,12 +54,12 @@ const Form = (props: Props) => {
         </ul>
         <ul className="list-login-bottom">
           <li className="">
-            <a href="#" className="">
+            <a href="/" className="">
               Create Account
             </a>
           </li>
           <li className="">
-            <a href="#" className="text-right">
+            <a href="/" className="text-right">
               Need Help?
             </a>
           </li>

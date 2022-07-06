@@ -1,0 +1,39 @@
+.expand-to-shop {
+    padding: 8px 11px;
+    border-radius: 5px;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 10;
+    &__title {
+        color: #b2fce4;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+    &__icon {
+        justify-content: center;
+        display: flex;
+        margin-left: 5px;
+    }
+    &:active,
+    &:hover {
+        background: #000000a6;
+    }
+    @media screen and(max-width:768px) {
+        bottom: 15px;
+        &__title {
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+}

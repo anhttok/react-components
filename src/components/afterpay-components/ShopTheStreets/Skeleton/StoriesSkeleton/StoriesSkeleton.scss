@@ -1,0 +1,30 @@
+@import '../_skeleton.scss';
+.stories-skeleton {
+    grid-column-gap: 22.4px;
+    display: grid;
+    justify-items: center;
+    width: fit-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 60px;
+    margin-top: 44px;
+    .image-skeleton {
+        border-radius: 50%;
+        width: 73.6px;
+        height: 73.6px;
+        @extend .raw-skeleton;
+    }
+    .name-skelton {
+        height: 12px;
+        width: 100%;
+        @extend .raw-skeleton;
+    }
+    @media screen and (max-width: 786px) {
+        grid-column-gap: 11.4px;
+        margin-left: 24px;
+        margin-top: 27px;
+        .image-skeleton {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}

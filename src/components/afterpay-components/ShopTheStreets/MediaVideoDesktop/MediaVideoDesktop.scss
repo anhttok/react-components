@@ -1,0 +1,91 @@
+.media-video-product-desktop-container {
+    max-width: 703px;
+    margin-top: 16px;
+    display: var(--media-video-product-desktop-container-display);
+    position: relative;
+    .swiper-slide {
+        a {
+            text-decoration: none;
+        }
+        .product-image {
+            height: 100%;
+            max-width: 217px;
+            max-height: 259px;
+            border-radius: 12px;
+            background-color: #f8f8f8;
+        }
+
+        .name {
+            font-style: normal;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 14px;
+            display: block;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .price {
+            display: flex;
+        }
+        .discount {
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-left: 8px;
+        }
+    }
+    .swiper-button.swiper-button-disabled {
+        display: none !important;
+    }
+    .swiper-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 64px;
+        height: 64px;
+        background: #b2fce4;
+        border-radius: 12px;
+
+        z-index: 2;
+        position: absolute;
+        top: calc(50% - 32px);
+        cursor: pointer;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+        &::before {
+            content: none;
+        }
+        &:hover {
+            background: #88ffd8;
+        }
+        @media screen and(max-width:1920px) {
+            width: 40px;
+            height: 40px;
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    .swiper-button.swiper-button-next {
+        transform: translateX(50%) translateY(-50%);
+        right: 0px;
+    }
+    .swiper-button.swiper-button-prev {
+        transform: translateX(-50%) translateY(-50%);
+        left: 0px;
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

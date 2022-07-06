@@ -9,10 +9,10 @@ type Props = {
 const FloatingActionButton = ({ children }: Props) => {
   const location = useLocation();
 
-  const listPage: string[] = ['/', 'login-form-2'];
+  const listPage: string[] = ['/', 'login-form-2', 'afterpay-components'];
   const fabElement = useRef<HTMLDivElement>(null);
   const wrapperElement = useRef<HTMLDivElement>(null);
-
+  const liRefs = useRef<any>([]);
   let oldPositionX: number = 30;
   let oldPositionY: number = 0;
 
@@ -111,18 +111,37 @@ const FloatingActionButton = ({ children }: Props) => {
     if (oldPositionY === fabElementY && oldPositionX === fabElementX) {
       fabElement.current.classList.toggle('fab-active');
     }
+    if (fabElement.current?.className === 'left fab-active') {
+      setStyleLiItems(1);
+    } else if (fabElement.current?.className === 'right fab-active') {
+      setStyleLiItems(-1);
+    } else {
+      setStyleLiItems(0);
+    }
+  };
+  const setStyleLiItems = (side: 1 | -1 | 0) => {
+    // 1 left, -1 right, 0 clear
+    if (liRefs.current) {
+      liRefs.current.forEach((element: any, index: number) => {
+        element.style.left = `${(index + 1) * 100 * side}%`;
+      });
+    }
   };
   const renderPageItem = (listPage: string[]) => {
     return listPage.map((item, index) => {
       if (location.pathname.replace('/', '') === item.replace('/', '')) {
         return (
-          <li key={index} className="current-page">
+          <li
+            key={index}
+            className="current-page"
+            ref={(el: any) => (liRefs.current[index] = el)}
+          >
             <Link to={item}>{index + 1}</Link>
           </li>
         );
       }
       return (
-        <li key={index}>
+        <li key={index} ref={(el: any) => (liRefs.current[index] = el)}>
           <Link to={item}>{index + 1}</Link>
         </li>
       );

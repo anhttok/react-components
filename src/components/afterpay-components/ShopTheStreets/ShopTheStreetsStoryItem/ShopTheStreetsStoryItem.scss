@@ -1,0 +1,81 @@
+.c-shop-the-streets-story-item {
+    width: 89.6px;
+    height: 112px;
+    cursor: pointer;
+    .link-story {
+        text-decoration: none;
+    }
+    .story-image {
+        width: 73.6px;
+        height: 73.6px;
+        border-radius: 50%;
+        margin: 4.8px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .border-story {
+        width: 89.6px;
+        height: 89.6px;
+        border: 3.2px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-style: solid;
+        transition: border-color 0.3s ease-in;
+    }
+    .border-story.inactive {
+        border-color: #f0efeb;
+    }
+
+    .border-story.active {
+        transition: filter 0.3s ease-in;
+        border-color: #b2fce4 !important;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    .name-account {
+        margin-top: 6.4px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .name-account.active {
+        color: #000000 !important;
+    }
+
+    @media screen and (max-width: 786px) {
+        width: 56px;
+        height: 70px;
+        .story-image {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            margin: 3px auto;
+        }
+        .border-story {
+            width: 56px;
+            height: 56px;
+            border: 2px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-style: solid;
+        }
+        .name-account {
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 10px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+    }
+    &:hover {
+        .border-story {
+            border-color: #b2fce4 !important;
+        }
+    }
+}

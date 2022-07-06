@@ -1,0 +1,140 @@
+:root {
+    --modal-video-width: 100%;
+    --modal-video-height: 100%;
+    --modal-video-radius: 12px;
+    --modal-video-header-padding: 0 16px;
+    --modal-top: 10px;
+    --modal-max-height: 833px;
+    --modal-max-width: 703px;
+    --icon-back-display: none;
+    --icon-more-display: none;
+    --icon-close-display: block;
+    --media-video-product-desktop-container-display: block;
+    --media-video-product-mobile-container-display: none;
+    --modal-over-flow: auto;
+}
+$header-padding-width: 31px;
+// mobile
+@media screen and (max-width: 768px) {
+    $header-padding-width: 32px;
+    :root {
+        --modal-video-width: 100vw;
+        --modal-video-height: 100vh;
+        --modal-video-radius: 0;
+        --modal-video-header-padding: 0 16px;
+        --modal-top: 0px;
+        --modal-max-height: 100vh;
+        --modal-max-width: 100vw;
+        --icon-back-display: block;
+        --icon-more-display: block;
+        --icon-close-display: none;
+        --media-video-product-desktop-container-display: none;
+        --media-video-product-mobile-container-display: block;
+        --modal-over-flow: hidden;
+    }
+}
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dly-modal {
+    -webkit-animation: fadeIn 500ms;
+    -moz-animation: fadeIn 500ms;
+    animation: fadeIn 500ms;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: var(--modal-over-flow);
+    background: #000000cc;
+    transition: height 0.5s ease-in;
+    -webkit-transition: height 0.5s ease-in;
+
+    .dly-modal-content {
+        margin: 0 auto;
+        position: relative;
+        width: var(--modal-video-width);
+        max-width: var(--modal-max-width);
+
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        .media-video-header {
+            border-radius: var(--modal-video-radius);
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+            // width: calc(100% - #{$header-padding-width});
+            height: 64px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: var(--modal-video-header-padding);
+            .center-item {
+                text-align: center;
+                font-family: Italian Plate No2 Expanded;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 24px;
+                color: #ffffff;
+                width: 100%;
+            }
+            .right-item {
+                margin-left: auto;
+            }
+            .icon-back {
+                display: var(--icon-back-display);
+                z-index: 100;
+            }
+            .icon-close {
+                display: var(--icon-close-display);
+                cursor: pointer;
+                z-index: 100;
+            }
+        }
+        .c-video-container {
+            max-width: var(--modal-video-width);
+            max-height: var(--modal-max-height);
+            width: var(--modal-video-width);
+            height: var(--modal-video-height);
+            border-radius: var(--modal-video-radius);
+            video {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: var(--modal-video-radius);
+            }
+
+            .c-video-loader {
+                position: fixed;
+            }
+        }
+    }
+}

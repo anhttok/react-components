@@ -1,0 +1,33 @@
+.shop-the-streets-stories-content-list {
+    margin-top: 44px;
+    margin-bottom: 16px;
+    // padding-left: 60px;
+    width: 100vw;
+    min-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    .swiper-container {
+        @media screen and (min-width: 1440px) {
+            padding-left: calc((100vw - 1320px) / 2);
+        }
+        @media screen and (min-width: 788px) and (max-width: 1440px) {
+            padding-left: 60px;
+        }
+    }
+    .story-swiper {
+        .swiper-slide {
+            width: 89.6px !important;
+            @media screen and (max-width: 786px) {
+                width: 56px !important;
+            }
+        }
+    }
+    @media screen and(max-width:786px) {
+        margin-top: 27px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        .swiper-container {
+            padding-left: 24px;
+        }
+    }
+}

@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles.scss';
 type Props = {};
 
@@ -13,7 +12,7 @@ const Header = (props: Props) => {
     <div className="header">
       <div className="header-logo">
         <h1>
-          <a href="#" target="_parent" className="header-logo__text">
+          <a href="/" target="_parent" className="header-logo__text">
             <span className="fa fa-key"> </span>
             Key
           </a>
