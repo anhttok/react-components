@@ -1,0 +1,94 @@
+.popover-calendar__wrapper {
+    position: relative;
+    display: inline-block;
+    .btn-calendar {
+        margin-left: auto;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 100%;
+        &:hover {
+            svg {
+                background: #fff;
+                border-radius: 100%;
+            }
+        }
+    }
+    .popover__content {
+        opacity: 0;
+
+        pointer-events: none;
+        user-select: none;
+
+        position: absolute;
+        transform: translate(calc(-100% + 42px), 0);
+        // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        width: auto;
+        width: 230px;
+        height: 262;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 0 23px 29px 23px;
+
+        transition: all 0.2s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+        transition-delay: .1s;
+
+        .card-header {
+            padding: 22px 0 15px 0px;
+            text-align: center;
+            border-bottom: 1px solid;
+            .card-title {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 15px;
+            }
+        }
+        .list-content {
+            padding-top: 5px;
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            .item {
+                margin-top: 21px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                height: 26px;
+                span {
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin-top: 4px;
+                    // line-height: 15px;
+                }
+                &.item-google img {
+                    margin-right: 15px;
+                    margin-left: -3px;
+                }
+                &.item-apple img {
+                    margin-right: 20px;
+                }
+                &.item-outlook img {
+                    margin-left: -6px;
+                    margin-right: 11px;
+                }
+                &.item-other svg {
+                    width: 26px;
+                    height: 26px;
+                    margin-left: -2px;
+                    margin-right: 14px;
+                }
+            }
+        }
+    }
+    &:hover .popover__content {
+        z-index: 10;
+        opacity: 1;
+
+        pointer-events: all;
+        user-select: all;
+
+        // transform: translate(-40px, -40px);
+    }
+}

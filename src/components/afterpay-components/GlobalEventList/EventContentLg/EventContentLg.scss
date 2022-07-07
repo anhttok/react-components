@@ -1,0 +1,101 @@
+.event-content-lg {
+    align-items: center;
+    display: grid;
+    width: calc(100% - 208px);
+    padding-left: 23px;
+    padding-right: 23px; 
+    grid-template-columns: calc(100% - 320px - 320px - 57px) 320px 320px 57px;
+
+    @media screen and (max-width: 1339px) {
+        grid-template-columns: calc(100% - 320px - 57px) 320px 57px;
+    }
+
+    @media screen and (max-width: 991px) {
+        grid-template-columns: 55% 35% 10%;
+    }
+
+    @media screen and (max-width: 768px) {
+        .event-title {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+
+    .tag-item {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .event-title {
+        margin-top: 8px;
+        font-weight: bold;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .categories-list {
+        display: flex;
+        .tag-item {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        .tag-item + .tag-item {
+            margin-left: 20px;
+            margin-right: 0;
+        }
+    }
+    
+    .time-content {
+        width: 320px;
+        .time {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 18px;
+            text-transform: uppercase;
+        }
+        &.time-content-xl {
+            display: none;
+        }
+        &.time-content-lg {
+            display: block;
+            margin-top: 8px;
+        }
+        @media screen and (min-width: 1440px) {
+            &.time-content-xl {
+                display: block;
+                text-align: center;
+            }
+            &.time-content-lg {
+                display: none;
+            }
+        }
+    }
+    .location-content {
+        width: 320px;
+        text-align: center;
+        margin-left: auto;
+        .location {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 8px;
+            }
+        }
+        @media screen and (max-width: 1339px) {
+            width: 210px;
+        }
+
+        @media screen and (max-width: 991px) {
+            width: 168px;
+        }
+    }
+    .btn-calendar-content {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,28 @@
+#new-york-fashion-week {
+    // background: #b2fce4;
+    color: #000000;
+    *,
+    button,
+    div {
+        font-family: Italian Plate No2 Expanded;
+    }
+}
+
+.layout-container {
+    // max-width: 1440px;
+    margin: 0 auto;
+    .layout-content {
+        padding-top: 100px;
+
+        &.--has-sweepstakes {
+            padding-top: 170px;
+        }
+        
+        margin: 0 auto;
+        background: #b2fce4;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

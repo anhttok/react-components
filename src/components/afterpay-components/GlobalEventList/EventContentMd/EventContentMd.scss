@@ -1,0 +1,195 @@
+.event-content-md {
+    padding: 48px 24px;
+    flex: 1;
+    position: relative;
+
+    flex-wrap: nowrap;
+    flex-direction: column;
+    .content-header {
+        display: flex;
+        .content-left {
+            .categories-list {
+                display: flex;
+                .tag-item {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+
+                .tag-item + .tag-item {
+                    margin-left: 20px;
+                    margin-right: 0;
+                }
+            }
+
+            .start-date {
+                margin-top: 16px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: uppercase;
+            }
+            .event-title {
+                margin-top: 4px;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 36px;
+            }
+        }
+        .content-right {
+            margin-left: auto;
+            .btn-calendar {
+                margin-top: -7px;
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+                transition: 0.3s;
+                border-radius: 100%;
+                &:hover {
+                    svg {
+                        background: #fff;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .event-location {
+        margin-top: 16px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 8px;
+        }
+    }
+    .event-description {
+        margin-bottom: 24px;
+        margin-top: 16px;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        p {
+            margin: 0;
+        }
+    }
+    .event-learn-more-button {
+        margin-top: auto;
+    }
+
+    .btn-learn-more {
+        max-width: 100%;
+        background: #000000;
+        border-radius: 12px;
+        border: 0;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 13px 22.5px;
+        // margin-top: 43px;
+        margin-top: auto;
+
+        position: relative;
+        z-index: 4;
+        /* identical to box height, or 150% */
+
+        /* white */
+
+        color: #ffffff;
+        cursor: pointer;
+        &:hover {
+            background: #000000cc;
+        }
+    }
+
+    .event-btn-group {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .event-watch-shop-button {
+        margin-top: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        .content-header {
+            .content-left {
+                .categories-list {
+                    .tag-item {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+
+                    .tag-item + .tag-item {
+                        margin-left: 14px;
+                    }
+                }
+                .start-date {
+                    margin-top: 14px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+                .event-title {
+                    margin-top: 4px;
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+            }
+            .content-right {
+                .btn-calendar {
+                    cursor: pointer;
+                    margin-top: 0px;
+                }
+            }
+        }
+        .event-location {
+            margin-top: 14px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .event-description {
+            margin-top: 14px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .btn-learn-more {
+            display: block;
+            margin-top: 29px;
+            width: 100%;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .event-content-md {
+        padding-bottom: 19px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn-learn-more {
+        margin-top: 0 !important;
+    }
+    .event-btn-group {
+        width: 100% !important;
+        display: block !important;
+
+        :not(:first-child) {
+            display: block;
+            margin-top: 16px;
+        }
+    }
+
+    .event-watch-shop-button {
+        margin-left: 0 !important;
+    }
+}

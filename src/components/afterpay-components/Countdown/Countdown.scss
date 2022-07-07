@@ -1,0 +1,79 @@
+.countdown-container {
+    background-color: #ffd333;
+
+    padding-top: 96px;
+    .countdown-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+            font-weight: bold;
+            font-size: 44px;
+            line-height: 64px;
+            text-align: center;
+        }
+        .description {
+            margin-top: 8px;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+        }
+        .countdown-time {
+            margin-top: 64px;
+            justify-content: center;
+            display: flex;
+            .countdown-item {
+                margin-right: 30px;
+                margin-left: 30px;
+                height: 68px;
+                .number {
+                    font-weight: bold;
+                    font-size: 44px;
+                    line-height: 44px;
+                }
+                .unit {
+                    margin-top: 4px;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .sale-image {
+        margin-top: 64px;
+        height: 326px;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 64px;
+        border-radius: 0px 0px 24px 24px;
+        .countdown-content {
+            padding-left: 24px;
+            justify-content: flex-start;
+            .title {
+                font-size: 24px;
+                line-height: 24px;
+                text-align: left;
+            }
+            .description {
+                font-size: 20px;
+                line-height: 24px;
+                text-align: left;
+            }
+            .countdown-time {
+                margin-top: 30px;
+                justify-content: flex-start;
+                .countdown-item:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .sale-image {
+            margin-top: 30px;
+        }
+    }
+}

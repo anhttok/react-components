@@ -1,0 +1,86 @@
+.featured-stories-container {
+    padding: 0 60px;
+
+    div {
+        box-sizing: border-box;
+    }
+    .header-info {
+        width: 541px;
+        max-width: 100%;
+        .title {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 40px;
+        }
+        .description {
+            margin-top: 8px;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            color: #4d4d4d;
+        }
+    }
+    .content-list {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 7px));
+        grid-column-gap: 14px;
+        grid-row-gap: 44px;
+        .lead-image {
+            border-radius: 24px;
+            .image-box {
+                padding-top: 76.22%;
+            }
+        }
+    }
+    .footer-info {
+        margin-top: 21px;
+        height: 118px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn-show-more {
+            height: 22px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0;
+        .header-info {
+            box-sizing: border-box;
+            padding: 48px 24px 0 24px;
+            .title {
+                font-size: 24px;
+                line-height: 24px;
+            }
+            .description {
+                margin-top: 8px;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        .content-list {
+            margin-top: 48px;
+            grid-template-columns: 100%;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            .lead-image {
+                .image-box {
+                    padding-top: 66.66%;
+                }
+            }
+        }
+        .footer-info {
+            margin-top: 0;
+            .btn-show-more {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}

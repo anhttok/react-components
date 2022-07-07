@@ -1,0 +1,99 @@
+.global-event-list-container {
+    padding-bottom: 1px;
+
+    .event-list-content {
+        display: grid;
+
+        &.list,
+        &.dly-view-list {
+            grid-template-columns: 100%;
+            grid-row-gap: 36px;
+
+            margin-bottom: 64px;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 44px;
+                grid-row-gap: 12px;
+            }
+        }
+
+        &.grid,
+        &.dly-view-grid {
+            grid-template-columns: repeat(3, calc(33% - 7px));
+            grid-column-gap: 14px;
+            grid-row-gap: 44px;
+
+            &.grid-2 {
+                grid-template-columns: repeat(2, calc(50% - 7px));
+            }
+
+            @media screen and (max-width: 1339px) {
+                grid-template-columns: repeat(2, calc(50% - 7px));
+                grid-row-gap: 44px;
+            }
+            @media screen and (max-width: 768px) {
+                &,
+                &.grid-2 {
+                    grid-template-columns: 100fr;
+                }
+                grid-row-gap: 0px;
+            }
+        }
+
+        &--title {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 40px;
+
+            margin-bottom: 36px;
+
+            @media screen and (max-width: 768px) {
+                // padding-left: 24px;
+
+                margin-bottom: 26px;
+
+                font-size: 24px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.past-events-header-container {
+    width: 100vw;
+    min-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background-color: #c5e0e5;
+    div {
+        box-sizing: border-box;
+    }
+    margin-bottom: 60px;
+    .next-header {
+        padding: 64px 60px;
+        display: flex;
+        align-items: center;
+
+        &--inner {
+            max-width: 1320px;
+            width: 100%;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 48px;
+        .next-header {
+            padding: 48px 24px;
+
+            .title {
+                font-size: 24px;
+                line-height: 24px;
+            }
+        }
+    }
+}

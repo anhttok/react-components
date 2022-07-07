@@ -1,0 +1,106 @@
+.show-item-container {
+    .lead-image {
+        padding-top: 76%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        border-radius: 24px;
+    }
+    .show-content {
+        margin-top: 25px;
+        .content-header {
+            display: flex;
+            .content-left {
+                .tag-item {
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+                .start-date {
+                    margin-top: 16px;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 15px;
+                    text-transform: uppercase;
+                }
+                .show-title {
+                    margin-top: 14px;
+                    font-weight: bold;
+                    font-size: 36px;
+                    line-height: 27px;
+                }
+            }
+
+            .content-right {
+                margin-left: auto;
+                .btn-calendar {
+                    background: transparent;
+                    border: 0;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    border-radius: 100%;
+                    &:hover {
+                        svg {
+                            background: #fff;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .show-location {
+            margin-top: 16px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 8px;
+            }
+        }
+        .show-description {
+            margin-top: 16px;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            max-width: 430px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .lead-image {
+            padding-top: 100%;
+            border-radius: 24px;
+        }
+        .show-content {
+            margin-top: 0;
+            padding: 48px 24px;
+            .content-header {
+                .content-left {
+                    .tag-item {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                    .start-date {
+                      margin-top: 14px;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+                    .show-title {
+                      margin-top: 4px;
+                        font-size: 24px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            .show-location {
+              margin-top: 14px;
+            }
+            .show-description {
+              margin-top: 14px;
+            }
+        }
+    }
+}

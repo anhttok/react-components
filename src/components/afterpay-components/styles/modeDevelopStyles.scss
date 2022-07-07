@@ -1,0 +1,45 @@
+$fontBaseUrl: 'https://d1fwdovdm56iog.cloudfront.net/assets/';
+
+@font-face {
+    font-family: 'Italian Plate No2 Expanded';
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Regular.eot');
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Regular.woff2') format('woff2'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Italian Plate No2 Expanded';
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Demibold.eot');
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Demibold.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Demibold.woff2') format('woff2'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Demibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Italian Plate No2 Expanded';
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Bold.eot');
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Bold.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Bold.woff2') format('woff2'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Italian Plate No2 Expanded';
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Italic.eot');
+    src: url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Italic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Italic.woff2') format('woff2'),
+        url('#{$fontBaseUrl}fonts/italian-plate/ItalianPlateNo2Expanded-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+body {
+    margin: 0;
+}
